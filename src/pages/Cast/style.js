@@ -5,7 +5,7 @@ export const Container = styled.div`
    background-color: #181818;
    height: 100vh;
    width: 100%;
-   ${mobile({ height: "120vh" })}
+   ${mobile({ height: "100vh", height: "150vh" })}
 `;
 
 export const Wrapper = styled.div`
@@ -14,21 +14,19 @@ export const Wrapper = styled.div`
    align-items: center;
    height: 100%;
    margin: 0 50px;
-   ${mobile({ flexDirection: "column", margin: "0" })}
+   ${mobile({ flexDirection: "column", margin: "0 10px" })}
 `;
 export const Image = styled.img`
-   height: 500px;
+   height: 300px;
    border-radius: 5px;
-
    object-fit: cover;
-   ${mobile({ height: "100px", width: "80px", marginTop: "20px" })}
+   ${mobile({ display: "none" })}
 `;
 export const InfoContainer = styled.div`
    color: #b3b3b3;
-   margin-left: 100px;
-   padding: 50px 50px;
+   padding: 0 20px;
    flex: 2;
-   ${mobile({ marginLeft: "10px", padding: "0" })}
+   ${mobile({ marginLeft: "0", padding: "0" })}
 `;
 
 export const Name = styled.h1`
@@ -38,16 +36,16 @@ export const Name = styled.h1`
 `;
 
 export const Biography = styled.div`
-   font-size: 20px;
+   font-size: 15px;
    margin-bottom: 25px;
-   ${mobile({ fontSize: "15px" })}
+   ${mobile({ fontSize: "15px", textAlign: "justify", margin: "0 10px" })}
 `;
 export const Dob = styled.div`
-   font-size: 15px;
-   margin-bottom: 20px;
+   font-size: 10px;
+   margin-bottom: 5px;
    ${mobile({ fontSize: "13px" })}
 `;
 export const Pob = styled.div`
-   font-size: 15px;
+   font-size: 10px;
    ${mobile({ fontSize: "13px" })}
 `;

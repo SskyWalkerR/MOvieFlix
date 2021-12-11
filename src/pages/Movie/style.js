@@ -90,7 +90,7 @@ export const Item = styled.div`
 export const Rating = styled.div`
    display: flex;
    align-items: center;
-   font-size: 35px;
+   font-size: 24px;
    ${mobile({ fontSize: "15px", marginBottom: "20px" })}
 `;
 
