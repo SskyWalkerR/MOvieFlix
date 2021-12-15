@@ -1,6 +1,4 @@
-### Future Updates
 
-Currently this application only contains movies. The Tv shows are coming soon :)
 
 # Getting Started with Create React App
 
