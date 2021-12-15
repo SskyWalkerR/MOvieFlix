@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 export const Container = styled.div`
    margin: 20px;
@@ -12,9 +13,9 @@ export const Top = styled.div`
 
 export const Title = styled.h1`
    margin: 0 40px;
-   font-size: ${(props) => (props.direction === "left" ? "30px" : "16px")};
-   color: ${(props) => props.direction === "right" && "#BE123C"};
-   cursor: ${(props) => props.direction === "right" && "pointer"};
+   font-size: 30px;
+   color: #be123c;
+   ${mobile({ fontSize: "20px" })}
 `;
 
 export const MovieContainer = styled.div`

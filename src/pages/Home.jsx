@@ -15,7 +15,7 @@ const Home = () => {
          <Movies title="Top Rated" cat="top_rated" />
          <Movies title="Up Coming" cat="upcoming" />
          <Movies title="Popular" cat="popular" />
-         <Casts allCast={false} />
+         <Casts />
          <Footer />
       </div>
    );

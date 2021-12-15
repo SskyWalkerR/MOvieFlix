@@ -13,12 +13,12 @@ import {
 } from "./style";
 import { Link } from "react-router-dom";
 
-const Movie = ({ movie, cat }) => {
+const Movie = ({ movie, cat, tv }) => {
    return (
       <Container>
          <Link
             style={{ textDecoration: "none" }}
-            to={`movie/${movie.id}`}
+            to={tv ? `tv/${movie.id}` : `movie/${movie.id}`}
             state={{ id: movie.id }}
          >
             <Card>
@@ -27,14 +27,16 @@ const Movie = ({ movie, cat }) => {
                      src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                      alt="coming"
                   />
-                  <OverView>
+                  {/* <OverView>
                      <h4>{movie.overview}</h4>
-                  </OverView>
+                  </OverView> */}
                </ImageContainer>
 
                <InfoContainer>
-                  <Origin>{movie.release_date}</Origin>
-                  <Title>{movie.title}</Title>
+                  <Origin>
+                     {tv ? movie.first_air_date : movie.release_date}
+                  </Origin>
+                  <Title>{tv ? movie.name : movie.title}</Title>
                   <Rating>Rating: {movie.vote_average}</Rating>
                   <Tag></Tag>
                </InfoContainer>

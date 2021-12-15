@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-   flex: 1;
-   min-width: 200px;
-   margin: 40px;
+   width: 150px;
+   height: auto;
+   margin: 20px;
    background-color: white;
-   &:hover {
+   /* &:hover {
       box-shadow: 0px 16px 32px rgba(221, 230, 237, 0.54);
-   }
+   } */
    cursor: pointer;
    transition: all 0.2s ease-in;
 `;
@@ -20,13 +20,14 @@ export const Card = styled.div`
 
 export const ImageContainer = styled.div`
    width: 100%;
-   height: 300px;
+   height: 60%;
 `;
 
 export const Image = styled.img`
    width: 100%;
    height: 100%;
    object-fit: cover;
+   border-radius: 10px;
 `;
 
 export const InfoContainer = styled.div`
@@ -43,6 +44,10 @@ export const Title = styled.h1`
    font-size: 18px;
    color: #111827;
    font-weight: 700;
+   &:hover {
+      color: #548ca8;
+   }
+   transition: all 0.2s ease-in;
 `;
 
 export const Rating = styled.div`

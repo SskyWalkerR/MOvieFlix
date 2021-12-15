@@ -15,14 +15,16 @@ import {
 import { request } from "../../api/tmbd";
 import { Link } from "react-router-dom";
 
-const Slider = () => {
+const Slider = ({ tv }) => {
    const [sliders, setSliders] = useState([]);
    const [sliderIndex, setSliderIndex] = useState(0);
 
    useEffect(() => {
       const getMovies = async () => {
          try {
-            const res = await request.get("movie/now_playing?");
+            const res = await request.get(
+               tv ? "/tv/on_the_air?" : "movie/now_playing?"
+            );
             setSliders(res.data.results);
          } catch (error) {
             console.log("Slider Error");
@@ -50,7 +52,7 @@ const Slider = () => {
             {sliders.map((movie) => (
                <Link
                   style={{ textDecoration: "none", color: "black" }}
-                  to={`movie/${movie.id}`}
+                  to={tv ? `tv/${movie.id}` : `movie/${movie.id}`}
                   state={{ id: movie.id }}
                   key={movie.id}
                >
@@ -61,7 +63,7 @@ const Slider = () => {
                         />
                      </ImgContainer>
                      <InfoContainer>
-                        <Title>{movie.title}</Title>
+                        <Title>{tv ? movie.name : movie.title}</Title>
                         <Desc>{movie.overview}</Desc>
                         <Button>WATCH NOW</Button>
                      </InfoContainer>

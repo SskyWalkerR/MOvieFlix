@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 export const Container = styled.div`
    height: 100px;
@@ -19,6 +20,8 @@ export const Logo = styled.h1`
    color: #be123c;
    font-weight: bold;
    letter-spacing: 2px;
+   cursor: pointer;
+   ${mobile({ fontSize: "24px" })}
 `;
 
 export const Right = styled.div`
@@ -35,4 +38,5 @@ export const MenuItem = styled.div`
    margin-left: 25px;
    padding: 5px 10px;
    cursor: pointer;
+   ${mobile({ fontSize: "14px" })}
 `;

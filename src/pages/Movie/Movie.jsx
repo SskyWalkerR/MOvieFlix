@@ -25,7 +25,7 @@ const imdbStyle = {
    },
 };
 
-const Movie = () => {
+const Movie = ({ tv }) => {
    const [movie, setMovie] = useState({});
    const location = useLocation();
    const { id } = location.state;
@@ -35,7 +35,7 @@ const Movie = () => {
    useEffect(() => {
       const getMovie = async () => {
          try {
-            const res = await request.get(`movie/${id}`);
+            const res = await request.get(tv ? `tv/${id}` : `movie/${id}`);
             setMovie(res.data);
          } catch (error) {
             console.log("ERROR");
@@ -60,7 +60,7 @@ const Movie = () => {
                   src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                />
                <Info>
-                  <Title>{movie.title}</Title>
+                  <Title>{tv ? movie.name : movie.title}</Title>
                   <Desc>{movie.overview}</Desc>
                   <ProductionInfo>
                      <Item>
@@ -69,7 +69,24 @@ const Movie = () => {
                            ?.map((data) => data.name)
                            ?.join(", ")}
                      </Item>
-                     <Item>RUNTIME : {movie.runtime} MIN</Item>
+                     <Item>
+                        {tv ? (
+                           <>
+                              HOME PAGE :{" "}
+                              <a
+                                 style={{
+                                    textDecoration: "none",
+                                    color: "#A2DBFA",
+                                 }}
+                                 href={movie.homepage}
+                              >
+                                 {movie.homepage}
+                              </a>
+                           </>
+                        ) : (
+                           <>RUNTIME : {movie.runtime} MIN</>
+                        )}
+                     </Item>
                      <Item>
                         GENRES :{" "}
                         {movie.genres?.map((data) => data.name).join(", ")}
@@ -81,10 +98,7 @@ const Movie = () => {
                            ?.join(", ")}
                      </Item>
                   </ProductionInfo>
-                  <Rating>
-                     <FaImdb style={imdbStyle} />
-                     {movie.vote_average}
-                  </Rating>
+                  <Rating>RATING : {movie.vote_average}</Rating>
                </Info>
             </InfoContainer>
          </Container>
