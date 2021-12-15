@@ -1,3 +1,23 @@
+# MOVIEFLIX APP
+
+### Movie Section
+#### Main Slider
+![image](https://user-images.githubusercontent.com/76952893/146213073-1fd8b264-b4e1-4a2b-b2ad-afcae4ad8ffe.png)
+
+#### Movie Slider
+![image](https://user-images.githubusercontent.com/76952893/146213539-acef677b-0e1c-4d2b-8ab6-ac9e364daec1.png)
+
+#### Cast
+![image](https://user-images.githubusercontent.com/76952893/146213724-ddc37eb8-da4f-4288-8ba3-e41f34970d06.png)
+
+#### Induvidual Movie
+![image](https://user-images.githubusercontent.com/76952893/146214078-7f198383-03c7-47b6-a90c-f5bc5ac18075.png)
+
+
+### Tv Show Section
+1).![image](https://user-images.githubusercontent.com/76952893/146214612-ed9cb041-4bff-4dbc-b4e9-e15cdcce1b07.png)
+2).![image](https://user-images.githubusercontent.com/76952893/146214759-ac194639-276d-40c4-9414-60faeace0365.png)
+3).![image](https://user-images.githubusercontent.com/76952893/146215104-678632e9-a798-4847-831a-87d54903e4a7.png)
 
 
 # Getting Started with Create React App
