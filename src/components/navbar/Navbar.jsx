@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Left, Logo, MenuItem, Right, Wrapper } from "./style";
 
 const Navbar = () => {
@@ -6,11 +7,17 @@ const Navbar = () => {
       <Container>
          <Wrapper>
             <Left>
-               <Logo>MovieFlix</Logo>
+               <Link style={{ textDecoration: "none" }} to="/">
+                  <Logo>MovieFlix</Logo>
+               </Link>
             </Left>
             <Right>
-               <MenuItem>MOVIE</MenuItem>
-               <MenuItem>TV SHOW</MenuItem>
+               <Link style={{ textDecoration: "none" }} to="/">
+                  <MenuItem>MOVIE</MenuItem>
+               </Link>
+               <Link style={{ textDecoration: "none" }} to="/show">
+                  <MenuItem>SHOW</MenuItem>
+               </Link>
             </Right>
          </Wrapper>
       </Container>

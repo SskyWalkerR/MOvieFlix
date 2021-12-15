@@ -15,6 +15,7 @@ export const SocialContainer = styled.div`
 `;
 export const Icon = styled.div`
    margin: 0 20px;
+   cursor: pointer;
 `;
 
 export const Links = styled.div`
