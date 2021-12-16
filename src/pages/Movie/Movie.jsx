@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { FaImdb } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
 import {
    Container,
    HeroImage,
@@ -12,18 +11,8 @@ import {
    Item,
    Rating,
 } from "./style";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import { request } from "../../api/tmbd";
-import { useState } from "react/cjs/react.development";
-
-const imdbStyle = {
-   fontSize: "20px",
-   marginRight: "15px",
-   color: "yellow",
-   "@media (maxWidth: 500px)": {
-      fontSize: "10px",
-   },
-};
 
 const Movie = ({ tv }) => {
    const [movie, setMovie] = useState({});

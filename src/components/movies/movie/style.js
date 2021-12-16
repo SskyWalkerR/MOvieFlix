@@ -19,32 +19,10 @@ export const Card = styled.div`
    align-items: flex-start;
 `;
 
-export const OverView = styled.div`
-   opacity: 0;
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   background-color: rgba(0, 0, 0, 0.3);
-   z-index: 3;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   transition: all 0.5s ease;
-   cursor: pointer;
-   color: white;
-   font-size: 18px;
-   text-align: center;
-`;
-
 export const ImageContainer = styled.div`
    width: 100%;
    height: 60%;
    position: relative;
-   /* &:hover ${OverView} {
-      opacity: 1;
-   } */
 `;
 
 export const Image = styled.img`

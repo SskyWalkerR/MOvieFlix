@@ -12,10 +12,10 @@ const App = () => {
          <BrowserRouter>
             <Routes>
                <Route path="/" element={<Home />} />
-               <Route path={"/movie/:id"} element={<Movie />} />
-               <Route path="/casts/:id" element={<Cast />} />
-               <Route path="/show" element={<TvSeries />} />
-               <Route path="/show/tv/:id" element={<Movie tv={true} />} />
+               <Route path={"movie/:id"} element={<Movie />} />
+               <Route path="casts/:id" element={<Cast />} />
+               <Route path="show" element={<TvSeries />} />
+               <Route path="show/tv/:id" element={<Movie tv={true} />} />
             </Routes>
          </BrowserRouter>
       </div>
@@ -23,17 +23,3 @@ const App = () => {
 };
 
 export default App;
-
-{
-   /* <Route path="/casts" element={<CastList />} /> */
-}
-{
-   /* <Route path="/casts/casts/:id" element={<Cast />} /> */
-}
-{
-   /* <Route path={"/movies/:cat/movie/:id"} element={<Movie />} /> */
-}
-
-{
-   /* <Route path="/movies/:cat" element={<MovieList />} /> */
-}

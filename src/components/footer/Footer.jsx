@@ -8,7 +8,7 @@ import {
    Rights,
    SocialContainer,
 } from "./style";
-import { SiInstagram, SiFacebook, SiTwitter, SiYoutube } from "react-icons/si";
+import { SiInstagram, SiGithub } from "react-icons/si";
 import { FcLike } from "react-icons/fc";
 
 const Footer = () => {
@@ -16,22 +16,20 @@ const Footer = () => {
       <Container>
          <SocialContainer>
             <Icon>
-               <SiFacebook style={{ fontSize: "22px" }} />
+               <a
+                  href="https://github.com/SskyWalkerR/movieflix"
+                  style={{ textDecoration: "none", color: "black" }}
+               >
+                  <SiGithub style={{ fontSize: "22px" }} />
+               </a>
             </Icon>
             <Icon>
                <SiInstagram style={{ fontSize: "22px" }} />
-            </Icon>
-            <Icon>
-               <SiTwitter style={{ fontSize: "22px" }} />
-            </Icon>
-            <Icon>
-               <SiYoutube style={{ fontSize: "22px" }} />
             </Icon>
          </SocialContainer>
          <Links>
             <Item>Conditions of Use</Item>
             <Item>Privacy & Policy</Item>
-            <Item>Press Room</Item>
          </Links>
          <Rights>
             <Right>
