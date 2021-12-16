@@ -31,7 +31,7 @@ const Slider = ({ tv }) => {
          }
       };
       getMovies();
-   }, []);
+   }, [tv]);
 
    const handleClick = (direction) => {
       if (direction === "left") {

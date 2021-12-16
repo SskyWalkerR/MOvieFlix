@@ -5,7 +5,7 @@ export const Container = styled.div`
    background-color: #181818;
    height: 100vh;
    width: 100%;
-   ${mobile({ height: "100vh", height: "150vh" })}
+   ${mobile({ height: "150vh" })}
 `;
 
 export const Wrapper = styled.div`

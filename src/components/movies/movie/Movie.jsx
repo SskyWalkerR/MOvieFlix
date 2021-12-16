@@ -9,7 +9,6 @@ import {
    Title,
    Rating,
    Tag,
-   OverView,
 } from "./style";
 import { Link } from "react-router-dom";
 
@@ -27,9 +26,6 @@ const Movie = ({ movie, cat, tv }) => {
                      src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                      alt="coming"
                   />
-                  {/* <OverView>
-                     <h4>{movie.overview}</h4>
-                  </OverView> */}
                </ImageContainer>
 
                <InfoContainer>

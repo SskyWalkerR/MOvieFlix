@@ -44,7 +44,7 @@ const Movies = ({ title, cat, tv }) => {
          }
       };
       getMovies();
-   }, [title]);
+   }, [title, tv]);
 
    return (
       <Container>
